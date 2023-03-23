@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t sun2meg/jenkinsdocker .'
+        sh 'docker build -t sun2meg/slaveragent .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push sun2meg/jenkinsdocker'
+        sh 'docker push sun2meg/slaveragent'
       }
     }
   }
